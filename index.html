@@ -221,7 +221,7 @@
       ['Puncak Suara','Gerbang terakhir tertinggal. Jalan menanjak menuju puncak yang terang, tempat seluruh jejak perjalananmu bertemu.','“Kita hampir sampai. Kalau masih ada yang ingin kamu sampaikan, di sinilah tempatnya.”']
     ];
     const scaleAgree=['Sangat tidak setuju','Tidak setuju','Netral','Setuju','Sangat setuju'];
-    const scenarioChoices=['Wajar, memang begitu','Nggak enak tapi nggak bisa diubah','Seharusnya ada yang memperbaiki','Nggak tahu'];
+    const scenarioChoices=['Pernah, wajar memang begitu','Pernah, seharusnya ada yang memperbaiki','Pernah, tapi nggak bisa diubah','Tidak, tapi wajar begitu','Tidak, seharusnya ada yang memperbaiki','Tidak, tapi nggak bisa diubah','Nggak tahu'];
     const split=s=>s.split('|');
     const questions=[];
     function add(segment,no,key,type,text,options='',rules={}){questions.push({segment,no,key,type,text,options:typeof options==='string'?split(options):options,...rules})}
