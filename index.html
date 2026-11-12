@@ -532,8 +532,8 @@
         if(!q.optional&&!selected(q.key).length){error('Pilih minimal satu jawaban untuk melanjutkan.');return false}
         if(q.max&&selected(q.key).length>q.max){error('Pilih maksimal '+q.max+' jawaban.');return false}
       }else if(!q.optional&&!val){error('Pilih satu jawaban untuk melanjutkan.');return false}
-      if((q.type==='multi'?selected(q.key).includes('Lainnya: ______'):val==='Lainnya: ______')&&!String($('other-answer').value).trim()){
-        error('Tuliskan jawaban lainnya terlebih dahulu.');$('other-answer').focus();return false
+      if((q.type==='multi'?selected(q.key).includes('Lainnya: ______'):val==='Lainnya: ______')&&!String(answers[q.key+'_other']||'').trim()){
+        error('Tuliskan jawaban lainnya terlebih dahulu.');if(activeQuestions()[index]===q)$('other-answer').focus();return false
       }
       return true;
     }
